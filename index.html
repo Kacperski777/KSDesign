@@ -244,6 +244,46 @@
       h4 {
         font-family: "Space Grotesk", sans-serif;
       }
+      .reveal {
+        opacity: 0;
+        transform: translate3d(0, 1rem, 0);
+        transition:
+          opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+          transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+      .reveal-delay-1 {
+        transition-delay: 0.1s;
+      }
+      .reveal-delay-2 {
+        transition-delay: 0.2s;
+      }
+      .reveal-delay-3 {
+        transition-delay: 0.3s;
+      }
+      .reveal-delay-4 {
+        transition-delay: 0.4s;
+      }
+      .reveal-delay-5 {
+        transition-delay: 0.5s;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        .reveal-delay-1,
+        .reveal-delay-2,
+        .reveal-delay-3,
+        .reveal-delay-4,
+        .reveal-delay-5 {
+          transition-delay: 0s;
+        }
+      }
     </style>
   </head>
   <body
@@ -278,24 +318,24 @@
             decoding="async"
           />
         </a>
-        <div class="hidden md:flex gap-10 items-center">
+        <div class="hidden md:flex gap-10 items-center" id="main-nav-links">
           <a
-            class="text-on-surface hover:text-primary-container transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+            class="nav-section-link border-b-2 border-transparent pb-1 font-['Space_Grotesk'] font-bold tracking-tight text-on-surface hover:text-primary-container transition-colors"
             href="#home"
             >About</a
           >
           <a
-            class="text-on-surface hover:text-primary-container transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+            class="nav-section-link border-b-2 border-transparent pb-1 font-['Space_Grotesk'] font-bold tracking-tight text-on-surface hover:text-primary-container transition-colors"
             href="#why-us"
             >Why Us</a
           >
           <a
-            class="text-on-surface hover:text-primary-container transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+            class="nav-section-link border-b-2 border-transparent pb-1 font-['Space_Grotesk'] font-bold tracking-tight text-on-surface hover:text-primary-container transition-colors"
             href="#work"
             >Work</a
           >
           <a
-            class="text-on-surface hover:text-primary-container transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+            class="nav-section-link border-b-2 border-transparent pb-1 font-['Space_Grotesk'] font-bold tracking-tight text-on-surface hover:text-primary-container transition-colors"
             href="#contact"
             >Contact</a
           >
@@ -331,7 +371,7 @@
         <div
           class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
         >
-          <div class="lg:col-span-8 z-10">
+          <div class="lg:col-span-8 z-10 reveal">
             <div
               class="inline-block bg-primary-container text-white px-4 py-1 mb-6 font-label font-bold text-sm tracking-widest"
               style=""
@@ -368,28 +408,29 @@
               </a>
             </div>
           </div>
-          <div class="lg:col-span-4 relative hidden lg:block">
+          <div class="lg:col-span-4 relative hidden lg:block reveal reveal-delay-1">
             <div
-              class="aspect-[3/4] bg-surface-container-low border-l-4 border-primary-container p-8 flex flex-col justify-end relative overflow-hidden group"
+              class="flex flex-col border-l-4 border-primary-container"
             >
               <div
-                class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-700"
-                aria-hidden="true"
+                class="group/laptop relative w-full max-w-lg mx-auto overflow-hidden aspect-[3/4] px-2 pt-1 mb-2"
               >
-                <span
-                  class="text-on-surface-variant/50 text-xs font-bold uppercase tracking-widest"
-                  >Image placeholder</span
-                >
+                <img
+                  class="absolute inset-0 h-full w-full object-cover object-[50%_38%] scale-[1.08] origin-[50%_36%] select-none opacity-50 transform-gpu transition-transform duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] group-hover/laptop:scale-[1.12] motion-reduce:transition-none motion-reduce:group-hover/laptop:scale-[1.08]"
+                  src="laptop_1.png"
+                  alt="Laptop representing a professional business website"
+                  width="1200"
+                  height="1600"
+                  decoding="async"
+                />
               </div>
-              <div class="relative z-10">
+              <div class="p-8 pt-2 bg-surface-container-low border-t border-outline-variant/10">
                 <span
                   class="text-5xl font-black text-primary-container block mb-2"
-                  style=""
                   >100%</span
                 >
                 <span
                   class="text-lg font-bold uppercase tracking-widest leading-none"
-                  style=""
                   >Built for Local UK Businesses</span
                 >
               </div>
@@ -408,7 +449,7 @@
       >
         <div class="max-w-7xl mx-auto">
           <div
-            class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+            class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 reveal"
           >
             <div class="max-w-2xl">
               <h2
@@ -432,7 +473,7 @@
           >
             <!-- Feature 1 -->
             <div
-              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group"
+              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group reveal"
             >
               <div
                 class="w-12 h-12 bg-surface flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors"
@@ -459,7 +500,7 @@
             </div>
             <!-- Feature 2 -->
             <div
-              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group"
+              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group reveal reveal-delay-1"
             >
               <div
                 class="w-12 h-12 bg-surface flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors"
@@ -486,7 +527,7 @@
             </div>
             <!-- Feature 3 -->
             <div
-              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group"
+              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group reveal reveal-delay-2"
             >
               <div
                 class="w-12 h-12 bg-surface flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors"
@@ -513,7 +554,7 @@
             </div>
             <!-- Feature 4 -->
             <div
-              class="p-10 border-b border-outline-variant/20 hover:bg-surface-container transition-colors group"
+              class="p-10 border-b border-outline-variant/20 hover:bg-surface-container transition-colors group reveal reveal-delay-3"
             >
               <div
                 class="w-12 h-12 bg-surface flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors"
@@ -544,7 +585,7 @@
       <!-- EXAMPLE WORK SECTION (Bento Grid Style) -->
       <section id="work" class="py-24 px-8 md:px-20 bg-surface scroll-mt-24">
         <div class="max-w-7xl mx-auto">
-          <div class="mb-16">
+          <div class="mb-16 reveal">
             <h2
               class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4"
               style=""
@@ -558,7 +599,7 @@
           <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
             <!-- Project 1: Plasterer -->
             <div
-              class="md:col-span-7 group relative bg-surface-container-high overflow-hidden min-h-[450px] flex flex-col justify-end p-8 border-l-8 border-primary-container"
+              class="md:col-span-7 group relative bg-surface-container-high overflow-hidden min-h-[450px] flex flex-col justify-end p-8 border-l-8 border-primary-container reveal"
             >
               <div
                 class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-500"
@@ -591,7 +632,7 @@
             </div>
             <!-- Project 2: Dog Groomer -->
             <div
-              class="md:col-span-5 group relative bg-surface-container-high overflow-hidden min-h-[450px] flex flex-col justify-end p-8"
+              class="md:col-span-5 group relative bg-surface-container-high overflow-hidden min-h-[450px] flex flex-col justify-end p-8 reveal reveal-delay-1"
             >
               <div
                 class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-500"
@@ -624,7 +665,7 @@
             </div>
             <!-- Project 3: Mobile Mechanic -->
             <div
-              class="md:col-span-12 group relative bg-surface-container-high overflow-hidden min-h-[350px] flex flex-col md:flex-row items-center p-8 gap-8"
+              class="md:col-span-12 group relative bg-surface-container-high overflow-hidden min-h-[350px] flex flex-col md:flex-row items-center p-8 gap-8 reveal reveal-delay-2"
             >
               <div class="md:w-1/2 relative h-full min-h-[250px] w-full">
                 <div
@@ -669,7 +710,7 @@
         <div
           class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 gap-12"
         >
-          <div class="max-w-2xl">
+          <div class="max-w-2xl reveal">
             <h2
               class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6 leading-none"
               style=""
@@ -697,7 +738,7 @@
               ></div>
             </div>
           </div>
-          <div class="w-full lg:w-auto">
+          <div class="w-full lg:w-auto reveal reveal-delay-1">
             <div
               class="bg-surface p-10 md:p-12 border-t-8 border-surface-container-high shadow-2xl min-w-full md:min-w-[450px]"
             >
@@ -774,7 +815,7 @@
     <!-- Footer -->
     <footer class="bg-surface w-full border-t-0">
       <div
-        class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full border-t border-outline-variant/20"
+        class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full border-t border-outline-variant/20 reveal"
       >
         <div class="mb-8 md:mb-0">
           <a href="#home" class="inline-block mb-2" aria-label="KS Digital — home">
@@ -832,6 +873,97 @@
           } catch (e) {}
         });
       })();
+      (function () {
+        var mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+        if (mq.matches) {
+          document.querySelectorAll(".reveal").forEach(function (el) {
+            el.classList.add("is-visible");
+          });
+          return;
+        }
+        var nodes = document.querySelectorAll(".reveal");
+        if (!nodes.length) return;
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        function show(el) {
+          el.classList.add("is-visible");
+        }
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              show(entry.target);
+              observer.unobserve(entry.target);
+            });
+          },
+          { root: null, rootMargin: "0px 0px -6% 0px", threshold: 0.12 },
+        );
+        nodes.forEach(function (el) {
+          var r = el.getBoundingClientRect();
+          if (r.top < vh * 0.92 && r.bottom > 0) {
+            show(el);
+          } else {
+            observer.observe(el);
+          }
+        });
+      })();
+      (function () {
+        var ids = ["home", "why-us", "work", "contact"];
+        var links = document.querySelectorAll("a.nav-section-link");
+        if (!links.length) return;
+        function sectionTop(el) {
+          return el.getBoundingClientRect().top + window.scrollY;
+        }
+        function getActiveId() {
+          var nav = document.querySelector("nav");
+          var navH = nav ? nav.offsetHeight : 0;
+          var y = window.scrollY + navH + 2;
+          var active = "home";
+          for (var i = ids.length - 1; i >= 0; i--) {
+            var el = document.getElementById(ids[i]);
+            if (!el) continue;
+            if (y >= sectionTop(el)) {
+              active = ids[i];
+              break;
+            }
+          }
+          return active;
+        }
+        function updateNav() {
+          var id = getActiveId();
+          links.forEach(function (a) {
+            var isActive = a.getAttribute("href") === "#" + id;
+            a.classList.toggle("text-primary-container", isActive);
+            a.classList.toggle("text-on-surface", !isActive);
+            a.classList.toggle("border-primary-container", isActive);
+            a.classList.toggle("border-transparent", !isActive);
+            if (isActive) a.setAttribute("aria-current", "location");
+            else a.removeAttribute("aria-current");
+          });
+        }
+        var ticking = false;
+        function onScrollOrResize() {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            updateNav();
+            ticking = false;
+          });
+        }
+        window.addEventListener("scroll", onScrollOrResize, { passive: true });
+        window.addEventListener("resize", onScrollOrResize);
+        window.addEventListener("hashchange", updateNav);
+        window.addEventListener("load", updateNav);
+        updateNav();
+      })();
     </script>
+    <style>
+      /* After Tailwind CDN: force active nav (scroll spy) */
+      #main-nav-links a.nav-section-link.text-primary-container {
+        color: rgb(var(--primary-container)) !important;
+      }
+      #main-nav-links a.nav-section-link.border-primary-container {
+        border-bottom-color: rgb(var(--primary-container)) !important;
+      }
+    </style>
   </body>
 </html>

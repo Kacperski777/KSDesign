@@ -1,6 +1,11 @@
 <!doctype html>
 <html class="dark" lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link id="ks-favicon" rel="icon" type="image/png" href="1.png" sizes="any" />
+    <link rel="apple-touch-icon" href="1.png" />
+    <title>KS Digital | Professional Websites for Local Businesses</title>
     <script>
       (function () {
         try {
@@ -8,11 +13,15 @@
           if (t === "light") document.documentElement.classList.remove("dark");
           else if (t === "dark") document.documentElement.classList.add("dark");
         } catch (e) {}
+        try {
+          var fav = document.getElementById("ks-favicon");
+          if (fav)
+            fav.href = document.documentElement.classList.contains("dark")
+              ? "2.png"
+              : "1.png";
+        } catch (e) {}
       })();
     </script>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>KS Digital | Professional Websites for Local Businesses</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
@@ -229,6 +238,7 @@
       html {
         scroll-behavior: smooth;
         scroll-padding-top: 6rem;
+        overflow-x: clip;
         transition:
           background-color 0.25s ease,
           color 0.25s ease;
@@ -237,6 +247,10 @@
         background-color: rgb(var(--background));
         color: rgb(var(--on-surface));
         font-family: "Manrope", sans-serif;
+        overflow-x: clip;
+      }
+      main {
+        overflow-x: clip;
       }
       h1,
       h2,
@@ -287,18 +301,18 @@
     </style>
   </head>
   <body
-    class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container"
+    class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container min-w-0"
   >
     <!-- TopNavBar -->
     <nav
       class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant/10"
     >
       <div
-        class="flex justify-between items-center gap-4 px-6 sm:px-8 py-1.5 sm:py-2 max-w-full mx-auto"
+        class="flex justify-between items-center gap-2 sm:gap-4 px-3 sm:px-6 md:px-8 py-1.5 sm:py-2 max-w-full mx-auto min-w-0"
       >
         <a
           href="#home"
-          class="block shrink-0 min-w-0 leading-none"
+          class="block min-w-0 shrink leading-none max-w-[min(52%,11rem)] sm:max-w-[min(200px,45vw)] md:max-w-none"
           aria-label="KS Digital — home"
         >
           <img
@@ -306,7 +320,7 @@
             alt=""
             width="2000"
             height="2000"
-            class="h-20 w-auto sm:h-24 md:h-28 lg:h-32 max-h-[min(36vh,13rem)] max-w-[min(480px,92vw)] dark:hidden object-contain object-left"
+            class="h-12 w-auto sm:h-16 md:h-20 lg:h-28 xl:h-32 max-h-[min(36vh,13rem)] max-w-full dark:hidden object-contain object-left"
             decoding="async"
           />
           <img
@@ -314,7 +328,7 @@
             alt=""
             width="2000"
             height="2000"
-            class="h-20 w-auto sm:h-24 md:h-28 lg:h-32 max-h-[min(36vh,13rem)] max-w-[min(480px,92vw)] hidden dark:block object-contain object-left"
+            class="h-12 w-auto sm:h-16 md:h-20 lg:h-28 xl:h-32 max-h-[min(36vh,13rem)] max-w-full hidden dark:block object-contain object-left"
             decoding="async"
           />
         </a>
@@ -340,38 +354,40 @@
             >Contact</a
           >
         </div>
-        <div class="flex items-center gap-3 shrink-0">
+        <div class="flex items-center gap-1.5 sm:gap-3 shrink-0 min-w-0">
           <button
             type="button"
             id="theme-toggle"
-            class="flex items-center justify-center size-9 rounded-full border border-outline-variant/30 text-on-surface hover:bg-surface-container hover:border-primary-container transition-colors"
+            class="flex shrink-0 items-center justify-center size-8 sm:size-9 rounded-full border border-outline-variant/30 text-on-surface hover:bg-surface-container hover:border-primary-container transition-colors"
             aria-label="Toggle light or dark theme"
           >
-            <span class="material-symbols-outlined text-xl hidden dark:inline"
+            <span
+              class="material-symbols-outlined text-lg sm:text-xl hidden dark:inline"
               >light_mode</span
             >
-            <span class="material-symbols-outlined text-xl dark:hidden"
+            <span
+              class="material-symbols-outlined text-lg sm:text-xl dark:hidden"
               >dark_mode</span
             >
           </button>
           <a
             href="#contact"
-            class="inline-flex items-center justify-center bg-primary-container text-white px-6 py-3 font-bold uppercase tracking-widest text-xs active:scale-95 duration-100 transition-all border border-transparent hover:bg-on-primary-fixed-variant hover:text-white hover:border-transparent"
+            class="inline-flex items-center justify-center bg-primary-container text-white px-2.5 py-2 sm:px-5 sm:py-3 font-bold uppercase tracking-wide sm:tracking-widest text-[0.65rem] leading-tight sm:text-xs text-center max-w-[9.5rem] sm:max-w-none active:scale-95 duration-100 transition-all border border-transparent hover:bg-on-primary-fixed-variant hover:text-white hover:border-transparent"
             >Get a Free Quote</a
           >
         </div>
       </div>
     </nav>
-    <main>
+    <main class="min-w-0">
       <!-- HERO SECTION -->
       <section
         id="home"
-        class="relative min-h-screen flex items-center pt-32 md:pt-40 px-8 md:px-20 overflow-hidden bg-surface scroll-mt-24"
+        class="relative min-h-screen flex items-center pt-32 md:pt-40 px-4 sm:px-8 md:px-20 overflow-x-clip bg-surface scroll-mt-24"
       >
         <div
-          class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+          class="max-w-7xl mx-auto w-full min-w-0 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
         >
-          <div class="lg:col-span-8 z-10 reveal">
+          <div class="lg:col-span-8 z-10 reveal min-w-0 max-w-full">
             <div
               class="inline-block bg-primary-container text-white px-4 py-1 mb-6 font-label font-bold text-sm tracking-widest"
               style=""
@@ -379,12 +395,11 @@
               EST. 2026
             </div>
             <h1
-              class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-8 uppercase italic"
-              style=""
+              class="text-3xl min-[380px]:text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] sm:leading-[0.9] tracking-tighter mb-8 uppercase italic break-words [overflow-wrap:anywhere] max-w-full"
             >
               Professional
-              <span class="text-primary-container" style="">Websites</span> for
-              Local Businesses
+              <span class="text-primary-container">Websites</span> for Local
+              Businesses
             </h1>
             <p
               class="text-xl md:text-2xl font-body text-on-surface-variant max-w-2xl mb-10 leading-relaxed"
@@ -408,10 +423,10 @@
               </a>
             </div>
           </div>
-          <div class="lg:col-span-4 relative hidden lg:block reveal reveal-delay-1">
-            <div
-              class="flex flex-col border-l-4 border-primary-container"
-            >
+          <div
+            class="lg:col-span-4 relative hidden lg:block reveal reveal-delay-1"
+          >
+            <div class="flex flex-col border-l-4 border-primary-container">
               <div
                 class="group/laptop relative w-full max-w-lg mx-auto overflow-hidden aspect-[3/4] px-2 pt-1 mb-2"
               >
@@ -424,7 +439,9 @@
                   decoding="async"
                 />
               </div>
-              <div class="p-8 pt-2 bg-surface-container-low border-t border-outline-variant/10">
+              <div
+                class="p-8 pt-2 bg-surface-container-low border-t border-outline-variant/10"
+              >
                 <span
                   class="text-5xl font-black text-primary-container block mb-2"
                   >100%</span
@@ -445,24 +462,22 @@
       <!-- WHY US SECTION -->
       <section
         id="why-us"
-        class="py-24 px-8 md:px-20 bg-surface-container-low scroll-mt-24"
+        class="py-24 px-4 sm:px-8 md:px-20 bg-surface-container-low scroll-mt-24"
       >
         <div class="max-w-7xl mx-auto">
           <div
-            class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8 reveal"
+            class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8 reveal"
           >
-            <div class="max-w-2xl">
+            <div class="max-w-2xl w-full text-left">
               <h2
-                class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4"
-                style=""
+                class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4 text-left"
               >
                 Why partner <br />with KS Digital?
               </h2>
               <div class="h-2 w-24 bg-primary-container"></div>
             </div>
             <p
-              class="text-on-surface-variant max-w-sm font-body text-lg italic"
-              style=""
+              class="text-on-surface-variant max-w-sm w-full font-body text-lg italic text-left md:w-auto"
             >
               We skip the agency fluff and focus on what matters: getting you
               more customers.
@@ -583,129 +598,188 @@
         </div>
       </section>
       <!-- EXAMPLE WORK SECTION (Bento Grid Style) -->
-      <section id="work" class="py-24 px-8 md:px-20 bg-surface scroll-mt-24">
+      <section
+        id="work"
+        class="py-24 px-4 sm:px-8 md:px-20 bg-surface scroll-mt-24"
+      >
         <div class="max-w-7xl mx-auto">
           <div class="mb-16 reveal">
             <h2
               class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4"
               style=""
             >
-              Selected Projects
+              Example Websites
             </h2>
             <p class="text-on-surface-variant max-w-xl font-body" style="">
-              Proven results for local trades and services across the country.
+              Here's what your new website could look like..
+            </p>
+            <p
+              class="mt-4 flex max-w-xl flex-wrap items-center gap-2 text-sm text-on-surface-variant font-body"
+            >
+              <span
+                class="material-symbols-outlined text-primary-container dark:text-primary-fixed text-xl leading-none"
+                aria-hidden="true"
+                >open_in_full</span
+              >
+              <span
+                >Click the fullscreen icon on a preview to see the full
+                screenshot.</span
+              >
             </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <!-- Project 1: Plasterer -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 md:items-stretch gap-8"
+          >
+            <!-- Project 1: Plasterer — full screenshot + caption below -->
             <div
-              class="md:col-span-7 group relative bg-surface-container-high overflow-hidden min-h-[450px] flex flex-col justify-end p-8 border-l-8 border-primary-container reveal"
+              class="md:col-span-7 group flex h-full min-h-0 flex-col bg-surface-container-high overflow-hidden border-l-8 border-primary-container reveal"
             >
               <div
-                class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-500"
-                aria-hidden="true"
+                class="relative h-64 w-full shrink-0 overflow-hidden sm:h-72 md:h-80"
               >
-                <span
-                  class="text-on-surface-variant/50 text-xs font-bold uppercase tracking-widest"
-                  >Image placeholder</span
-                >
-              </div>
-              <div class="relative z-10">
-                <span
-                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4 inline-block"
-                  style=""
-                  >CONSTRUCTION</span
-                >
-                <h3 class="text-3xl font-black uppercase mb-6" style="">
-                  Elite Plastering UK
-                </h3>
+                <img
+                  src="Plastering.gif"
+                  alt="Elite Plastering UK — example website preview"
+                  class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <button
-                  class="flex items-center gap-2 font-bold uppercase tracking-tighter text-sm group-hover:gap-4 transition-all"
-                  style=""
-                >
-                  View Site
-                  <span class="material-symbols-outlined" style=""
-                    >arrow_forward</span
-                  >
-                </button>
-              </div>
-            </div>
-            <!-- Project 2: Dog Groomer -->
-            <div
-              class="md:col-span-5 group relative bg-surface-container-high overflow-hidden min-h-[450px] flex flex-col justify-end p-8 reveal reveal-delay-1"
-            >
-              <div
-                class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-500"
-                aria-hidden="true"
-              >
-                <span
-                  class="text-on-surface-variant/50 text-xs font-bold uppercase tracking-widest"
-                  >Image placeholder</span
-                >
-              </div>
-              <div class="relative z-10">
-                <span
-                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4 inline-block"
-                  style=""
-                  >PET SERVICES</span
-                >
-                <h3 class="text-3xl font-black uppercase mb-6" style="">
-                  Paws &amp; Polish
-                </h3>
-                <button
-                  class="flex items-center gap-2 font-bold uppercase tracking-tighter text-sm group-hover:gap-4 transition-all"
-                  style=""
-                >
-                  View Site
-                  <span class="material-symbols-outlined" style=""
-                    >arrow_forward</span
-                  >
-                </button>
-              </div>
-            </div>
-            <!-- Project 3: Mobile Mechanic -->
-            <div
-              class="md:col-span-12 group relative bg-surface-container-high overflow-hidden min-h-[350px] flex flex-col md:flex-row items-center p-8 gap-8 reveal reveal-delay-2"
-            >
-              <div class="md:w-1/2 relative h-full min-h-[250px] w-full">
-                <div
-                  class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-500"
-                  aria-hidden="true"
+                  type="button"
+                  class="work-fullscreen-btn absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  aria-label="View Elite Plastering UK screenshot full size"
+                  data-full-src="Plastering.gif"
+                  data-full-alt="Elite Plastering UK — example website preview"
                 >
                   <span
-                    class="text-on-surface-variant/50 text-xs font-bold uppercase tracking-widest"
-                    >Image placeholder</span
+                    class="material-symbols-outlined text-[22px] leading-none"
+                    aria-hidden="true"
+                    >open_in_full</span
                   >
-                </div>
-              </div>
-              <div class="md:w-1/2 flex flex-col justify-center">
-                <span
-                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4 inline-block w-fit"
-                  style=""
-                  >AUTOMOTIVE</span
-                >
-                <h3 class="text-4xl font-black uppercase mb-4" style="">
-                  The Mobile Spanner
-                </h3>
-                <p class="text-on-surface-variant mb-8 max-w-md" style="">
-                  Full booking system and service directory built for a local
-                  independent mechanic.
-                </p>
-                <button
-                  class="bg-on-surface text-surface w-fit px-8 py-4 font-black uppercase tracking-tighter hover:bg-primary-container hover:text-white transition-all"
-                  style=""
-                >
-                  View Site
                 </button>
               </div>
+              <div
+                class="flex flex-shrink-0 flex-col gap-3 border-t border-outline-variant/25 bg-surface-container px-6 py-6 md:px-8 md:py-7"
+              >
+                <span
+                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest w-fit"
+                  >CONSTRUCTION</span
+                >
+                <h3
+                  class="text-3xl font-black uppercase tracking-tighter text-on-surface dark:text-white"
+                >
+                  Elite Plastering UK
+                </h3>
+              </div>
             </div>
+            <!-- Project 2: Dog Groomer — full screenshot + caption below -->
+            <div
+              class="md:col-span-5 group flex h-full min-h-0 flex-col bg-surface-container-high overflow-hidden reveal reveal-delay-1"
+            >
+              <div
+                class="relative h-64 w-full shrink-0 overflow-hidden sm:h-72 md:h-80"
+              >
+                <img
+                  src="Paws_Polish.gif"
+                  alt="Paws &amp; Polish — example website preview"
+                  class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <button
+                  type="button"
+                  class="work-fullscreen-btn absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  aria-label="View Paws &amp; Polish screenshot full size"
+                  data-full-src="Paws_Polish.gif"
+                  data-full-alt="Paws &amp; Polish — example website preview"
+                >
+                  <span
+                    class="material-symbols-outlined text-[22px] leading-none"
+                    aria-hidden="true"
+                    >open_in_full</span
+                  >
+                </button>
+              </div>
+              <div
+                class="flex flex-shrink-0 flex-col gap-3 border-t border-outline-variant/25 bg-surface-container px-6 py-6 md:px-8 md:py-7"
+              >
+                <span
+                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest w-fit"
+                  >PET SERVICES</span
+                >
+                <h3
+                  class="text-3xl font-black uppercase tracking-tighter text-on-surface dark:text-white"
+                >
+                  Paws &amp; Polish
+                </h3>
+              </div>
+            </div>
+            <!-- Project 3: The Little Bake Co -->
+            <div
+              class="md:col-span-12 group flex h-full min-h-0 flex-col bg-surface-container-high overflow-hidden reveal reveal-delay-2"
+            >
+              <div
+                class="relative h-64 w-full shrink-0 overflow-hidden sm:h-72 md:h-80"
+              >
+                <img
+                  src="TheLittleBake.gif"
+                  alt="The Little Bake Co — example bakery website preview"
+                  class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <button
+                  type="button"
+                  class="work-fullscreen-btn absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center bg-black/50 text-white backdrop-blur-sm transition-colors hover:bg-black/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  aria-label="View The Little Bake Co screenshot full size"
+                  data-full-src="TheLittleBake.gif"
+                  data-full-alt="The Little Bake Co — example bakery website preview"
+                >
+                  <span
+                    class="material-symbols-outlined text-[22px] leading-none"
+                    aria-hidden="true"
+                    >open_in_full</span
+                  >
+                </button>
+              </div>
+              <div
+                class="flex flex-shrink-0 flex-col gap-3 border-t border-outline-variant/25 bg-surface-container px-6 py-6 md:px-8 md:py-7"
+              >
+                <span
+                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest w-fit"
+                  >BAKERY &amp; RETAIL</span
+                >
+                <h3
+                  class="text-3xl font-black uppercase tracking-tighter text-on-surface dark:text-white md:text-4xl"
+                >
+                  The Little Bake Co
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div
+            class="mt-16 flex flex-col items-center border-t border-outline-variant/20 pt-12 text-center md:mt-20 md:pt-16 reveal"
+          >
+            <span
+              class="material-symbols-outlined mb-6 text-5xl leading-none text-primary-container dark:text-primary-fixed md:text-6xl"
+              aria-hidden="true"
+              >design_services</span
+            >
+            <p
+              class="max-w-3xl font-body text-lg leading-relaxed text-on-surface-variant md:text-xl"
+            >
+              The previews above are just a taste—we can build whatever suits
+              you. Tell us what you need, your style, and your goals; we’ll
+              shape a site around that. No rigid templates or hard limits—just
+              a straightforward process and a result you’re happy with.
+            </p>
           </div>
         </div>
       </section>
       <!-- CONTACT SECTION -->
       <section
         id="contact"
-        class="py-24 px-8 md:px-20 bg-primary-container text-white relative overflow-hidden scroll-mt-24"
+        class="py-24 px-4 sm:px-8 md:px-20 bg-primary-container text-white relative overflow-x-clip scroll-mt-24"
       >
         <div
           class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 gap-12"
@@ -742,15 +816,16 @@
             <div
               class="bg-surface p-10 md:p-12 border-t-8 border-surface-container-high shadow-2xl min-w-full md:min-w-[450px]"
             >
-              <h3
-                class="text-on-surface text-3xl font-black uppercase mb-8 tracking-tighter"
-              >
-                Send a Message
-              </h3>
-              <form class="space-y-6">
+              <div id="contact-form-panel">
+                <h3
+                  class="text-on-surface dark:text-white text-3xl font-black uppercase mb-8 tracking-tighter"
+                >
+                  Send a Message
+                </h3>
+                <form id="contact-form" class="space-y-6">
                 <div>
                   <label
-                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
                     for="contact-name"
                     >Your Name</label
                   >
@@ -758,14 +833,15 @@
                     id="contact-name"
                     name="name"
                     autocomplete="name"
-                    class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-container text-on-surface px-3 sm:px-4 py-3 outline-none transition-all placeholder:text-outline-variant"
+                    required
+                    class="w-full rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20"
                     placeholder="Your Name"
                     type="text"
                   />
                 </div>
                 <div>
                   <label
-                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
                     for="contact-email"
                     >Your Email</label
                   >
@@ -773,7 +849,8 @@
                     id="contact-email"
                     name="email"
                     autocomplete="email"
-                    class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-container text-on-surface px-3 sm:px-4 py-3 outline-none transition-all placeholder:text-outline-variant"
+                    required
+                    class="w-full rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20"
                     placeholder="Your Email"
                     type="email"
                     inputmode="email"
@@ -781,7 +858,7 @@
                 </div>
                 <div>
                   <label
-                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
                     for="contact-enquiry"
                     >Enquiry</label
                   >
@@ -789,7 +866,8 @@
                     id="contact-enquiry"
                     name="enquiry"
                     rows="5"
-                    class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-container text-on-surface px-3 sm:px-4 py-3 outline-none transition-all placeholder:text-outline-variant resize-y min-h-[7rem] block"
+                    required
+                    class="w-full min-h-[7rem] resize-y rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20 block"
                     placeholder="Your enquiry"
                   ></textarea>
                 </div>
@@ -800,6 +878,67 @@
                   Send Enquiry
                 </button>
               </form>
+              </div>
+              <div
+                id="contact-success-panel"
+                class="hidden text-center space-y-8 py-2"
+                aria-hidden="true"
+                role="status"
+              >
+                <div
+                  class="contact-success-icon-wrap relative mx-auto flex h-28 w-28 items-center justify-center"
+                >
+                  <div
+                    class="absolute inset-0 rounded-full bg-primary-container/15 blur-sm motion-safe:animate-pulse"
+                    aria-hidden="true"
+                  ></div>
+                  <div
+                    class="absolute inset-0 rounded-full border-2 border-dashed border-primary-container/35 motion-safe:animate-[spin_12s_linear_infinite]"
+                    aria-hidden="true"
+                  ></div>
+                  <div
+                    class="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary-container text-white shadow-lg shadow-primary-container/25"
+                  >
+                    <span
+                      class="material-symbols-outlined text-[2.75rem] leading-none"
+                      style="font-variation-settings: 'FILL' 1, 'wght' 600"
+                      aria-hidden="true"
+                      >check</span
+                    >
+                  </div>
+                </div>
+                <div class="contact-success-content space-y-4">
+                  <h3
+                    id="contact-success-title"
+                    tabindex="-1"
+                    class="text-on-surface dark:text-white text-3xl md:text-4xl font-black uppercase tracking-tighter leading-tight"
+                  >
+                    Message received
+                  </h3>
+                  <p
+                    class="text-on-surface-variant dark:text-white/85 font-body text-lg md:text-xl leading-relaxed max-w-md mx-auto"
+                  >
+                    Your enquiry went through successfully. We’ll get back to
+                    you within the next
+                    <span
+                      class="text-primary-container dark:text-primary-fixed font-semibold whitespace-nowrap"
+                      >24 hours</span
+                    >.
+                  </p>
+                  <p
+                    class="text-on-surface-variant/90 dark:text-white/60 text-sm font-body max-w-sm mx-auto"
+                  >
+                    Need something sooner? Email us at ksdigitaluk@gmail.com.
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  id="contact-success-reset"
+                  class="w-full border-2 border-primary-container text-primary-container dark:border-white dark:text-white py-4 font-black uppercase tracking-widest hover:bg-primary-container hover:text-white dark:hover:bg-white dark:hover:text-primary-container transition-all"
+                >
+                  Send another message
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -812,13 +951,51 @@
         </div>
       </section>
     </main>
+    <div
+      id="work-lightbox"
+      class="fixed inset-0 z-[200] hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-hidden="true"
+      aria-label="Full size website preview"
+    >
+      <button
+        type="button"
+        class="absolute inset-0 bg-black/90"
+        data-lightbox-backdrop
+        aria-label="Close preview"
+      ></button>
+      <div
+        class="pointer-events-none absolute inset-0 flex items-center justify-center p-4 sm:p-10"
+      >
+        <img
+          id="work-lightbox-img"
+          alt=""
+          class="pointer-events-auto relative z-10 max-h-[min(92vh,100%)] w-auto max-w-full object-contain shadow-2xl"
+          width="1600"
+          height="1200"
+        />
+      </div>
+      <button
+        type="button"
+        class="absolute right-4 top-4 z-20 flex h-11 w-11 items-center justify-center border-2 border-white/90 text-white transition-colors hover:bg-white hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        data-lightbox-close
+        aria-label="Close"
+      >
+        <span class="material-symbols-outlined text-2xl leading-none">close</span>
+      </button>
+    </div>
     <!-- Footer -->
     <footer class="bg-surface w-full border-t-0">
       <div
-        class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full border-t border-outline-variant/20 reveal"
+        class="flex flex-col md:flex-row justify-between items-center px-4 sm:px-8 py-12 w-full min-w-0 border-t border-outline-variant/20 reveal"
       >
         <div class="mb-8 md:mb-0">
-          <a href="#home" class="inline-block mb-2" aria-label="KS Digital — home">
+          <a
+            href="#home"
+            class="inline-block mb-2"
+            aria-label="KS Digital — home"
+          >
             <img
               src="1.png"
               alt=""
@@ -871,6 +1048,9 @@
               root.classList.contains("dark") ? "dark" : "light",
             );
           } catch (e) {}
+          var fav = document.getElementById("ks-favicon");
+          if (fav)
+            fav.href = root.classList.contains("dark") ? "2.png" : "1.png";
         });
       })();
       (function () {
@@ -955,8 +1135,202 @@
         window.addEventListener("load", updateNav);
         updateNav();
       })();
+      (function () {
+        var form = document.getElementById("contact-form");
+        if (!form) return;
+        var formPanel = document.getElementById("contact-form-panel");
+        var successPanel = document.getElementById("contact-success-panel");
+        var successTitle = document.getElementById("contact-success-title");
+        var successReset = document.getElementById("contact-success-reset");
+        /** Paste your public access key from https://web3forms.com (Create Form → Access Key) */
+        var WEB3FORMS_ACCESS_KEY = "3372d480-75e5-4183-a057-a6900214f27b";
+        var subject = "KSDesign Enquiry";
+        function showContactSuccess() {
+          if (formPanel) formPanel.classList.add("hidden");
+          if (successPanel) {
+            successPanel.classList.remove("hidden");
+            successPanel.setAttribute("aria-hidden", "false");
+            successPanel.classList.remove("contact-success-anim");
+            void successPanel.offsetWidth;
+            successPanel.classList.add("contact-success-anim");
+          }
+          if (successTitle) {
+            successTitle.focus({ preventScroll: true });
+          }
+          if (successPanel) {
+            successPanel.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+            });
+          }
+        }
+        function hideContactSuccess() {
+          if (successPanel) {
+            successPanel.classList.add("hidden");
+            successPanel.setAttribute("aria-hidden", "true");
+            successPanel.classList.remove("contact-success-anim");
+          }
+          if (formPanel) formPanel.classList.remove("hidden");
+        }
+        if (successReset) {
+          successReset.addEventListener("click", function () {
+            hideContactSuccess();
+            form.reset();
+            var btn = form.querySelector('button[type="submit"]');
+            if (btn) {
+              btn.disabled = false;
+              btn.textContent = "Send Enquiry";
+            }
+          });
+        }
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+          if (!WEB3FORMS_ACCESS_KEY) {
+            alert(
+              "Add your Web3Forms access key in index.html (search for WEB3FORMS_ACCESS_KEY). Get a free key at https://web3forms.com",
+            );
+            return;
+          }
+          var submitSucceeded = false;
+          var name = document.getElementById("contact-name").value.trim();
+          var email = document.getElementById("contact-email").value.trim();
+          var enquiry = document.getElementById("contact-enquiry").value.trim();
+          var btn = form.querySelector('button[type="submit"]');
+          var originalLabel = btn ? btn.textContent : "";
+          if (btn) {
+            btn.disabled = true;
+            btn.textContent = "Sending…";
+          }
+          fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              access_key: WEB3FORMS_ACCESS_KEY,
+              subject: subject,
+              name: name,
+              email: email,
+              message: enquiry,
+            }),
+          })
+            .then(function (res) {
+              return res.json();
+            })
+            .then(function (data) {
+              if (data.success) {
+                submitSucceeded = true;
+                form.reset();
+                showContactSuccess();
+              } else {
+                alert(
+                  (data && data.message) ||
+                    "Something went wrong. Please try again.",
+                );
+              }
+            })
+            .catch(function () {
+              alert("Network error. Please try again.");
+            })
+            .finally(function () {
+              if (btn && !submitSucceeded) {
+                btn.disabled = false;
+                btn.textContent = originalLabel;
+              }
+            });
+        });
+      })();
+      (function () {
+        var root = document.getElementById("work-lightbox");
+        var imgEl = document.getElementById("work-lightbox-img");
+        var closeBtn = document.querySelector("[data-lightbox-close]");
+        var backdrop = document.querySelector("[data-lightbox-backdrop]");
+        if (!root || !imgEl) return;
+        function closeLightbox() {
+          root.classList.add("hidden");
+          root.setAttribute("aria-hidden", "true");
+          imgEl.removeAttribute("src");
+          imgEl.alt = "";
+          document.documentElement.classList.remove("overflow-hidden");
+          document.removeEventListener("keydown", onKeydown);
+        }
+        function onKeydown(e) {
+          if (e.key === "Escape") closeLightbox();
+        }
+        function openLightbox(src, alt) {
+          imgEl.src = src;
+          imgEl.alt = alt || "";
+          root.classList.remove("hidden");
+          root.setAttribute("aria-hidden", "false");
+          document.documentElement.classList.add("overflow-hidden");
+          document.addEventListener("keydown", onKeydown);
+          if (closeBtn) closeBtn.focus();
+        }
+        document.querySelectorAll(".work-fullscreen-btn").forEach(function (btn) {
+          btn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            openLightbox(
+              btn.getAttribute("data-full-src"),
+              btn.getAttribute("data-full-alt"),
+            );
+          });
+        });
+        if (backdrop)
+          backdrop.addEventListener("click", function () {
+            closeLightbox();
+          });
+        if (closeBtn)
+          closeBtn.addEventListener("click", function () {
+            closeLightbox();
+          });
+      })();
     </script>
     <style>
+      @keyframes contact-success-pop {
+        0% {
+          opacity: 0;
+          transform: scale(0.85);
+        }
+        55% {
+          opacity: 1;
+          transform: scale(1.04);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      @keyframes contact-success-rise {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .contact-success-anim .contact-success-icon-wrap {
+        animation: contact-success-pop 0.65s cubic-bezier(0.22, 1, 0.36, 1)
+          forwards;
+      }
+      .contact-success-anim .contact-success-content {
+        animation: contact-success-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1)
+          0.12s both;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .contact-success-anim .contact-success-icon-wrap,
+        .contact-success-anim .contact-success-content {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+      }
       /* After Tailwind CDN: force active nav (scroll spy) */
       #main-nav-links a.nav-section-link.text-primary-container {
         color: rgb(var(--primary-container)) !important;

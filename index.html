@@ -1,0 +1,837 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("ks-theme");
+          if (t === "light") document.documentElement.classList.remove("dark");
+          else if (t === "dark") document.documentElement.classList.add("dark");
+        } catch (e) {}
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>KS Digital | Professional Websites for Local Businesses</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed-variant":
+                "rgb(var(--on-primary-fixed-variant) / <alpha-value>)",
+              error: "rgb(var(--error) / <alpha-value>)",
+              "error-container": "rgb(var(--error-container) / <alpha-value>)",
+              "tertiary-fixed-dim":
+                "rgb(var(--tertiary-fixed-dim) / <alpha-value>)",
+              surface: "rgb(var(--surface) / <alpha-value>)",
+              "secondary-container":
+                "rgb(var(--secondary-container) / <alpha-value>)",
+              "on-surface-variant":
+                "rgb(var(--on-surface-variant) / <alpha-value>)",
+              "primary-container":
+                "rgb(var(--primary-container) / <alpha-value>)",
+              "outline-variant": "rgb(var(--outline-variant) / <alpha-value>)",
+              "primary-fixed": "rgb(var(--primary-fixed) / <alpha-value>)",
+              "surface-container-highest":
+                "rgb(var(--surface-container-highest) / <alpha-value>)",
+              "tertiary-fixed": "rgb(var(--tertiary-fixed) / <alpha-value>)",
+              "on-secondary-fixed-variant":
+                "rgb(var(--on-secondary-fixed-variant) / <alpha-value>)",
+              secondary: "rgb(var(--secondary) / <alpha-value>)",
+              "on-surface": "rgb(var(--on-surface) / <alpha-value>)",
+              "surface-container-high":
+                "rgb(var(--surface-container-high) / <alpha-value>)",
+              "inverse-primary": "rgb(var(--inverse-primary) / <alpha-value>)",
+              "secondary-fixed-dim":
+                "rgb(var(--secondary-fixed-dim) / <alpha-value>)",
+              "on-primary": "rgb(var(--on-primary) / <alpha-value>)",
+              "on-tertiary": "rgb(var(--on-tertiary) / <alpha-value>)",
+              "surface-variant": "rgb(var(--surface-variant) / <alpha-value>)",
+              "inverse-surface": "rgb(var(--inverse-surface) / <alpha-value>)",
+              background: "rgb(var(--background) / <alpha-value>)",
+              "on-secondary-fixed":
+                "rgb(var(--on-secondary-fixed) / <alpha-value>)",
+              "on-primary-fixed":
+                "rgb(var(--on-primary-fixed) / <alpha-value>)",
+              "on-primary-container":
+                "rgb(var(--on-primary-container) / <alpha-value>)",
+              "primary-fixed-dim":
+                "rgb(var(--primary-fixed-dim) / <alpha-value>)",
+              "surface-container-low":
+                "rgb(var(--surface-container-low) / <alpha-value>)",
+              "secondary-fixed": "rgb(var(--secondary-fixed) / <alpha-value>)",
+              "on-error-container":
+                "rgb(var(--on-error-container) / <alpha-value>)",
+              "on-secondary": "rgb(var(--on-secondary) / <alpha-value>)",
+              "on-tertiary-fixed-variant":
+                "rgb(var(--on-tertiary-fixed-variant) / <alpha-value>)",
+              "surface-tint": "rgb(var(--surface-tint) / <alpha-value>)",
+              "surface-dim": "rgb(var(--surface-dim) / <alpha-value>)",
+              "tertiary-container":
+                "rgb(var(--tertiary-container) / <alpha-value>)",
+              tertiary: "rgb(var(--tertiary) / <alpha-value>)",
+              "on-background": "rgb(var(--on-background) / <alpha-value>)",
+              primary: "rgb(var(--primary) / <alpha-value>)",
+              "surface-container":
+                "rgb(var(--surface-container) / <alpha-value>)",
+              "on-secondary-container":
+                "rgb(var(--on-secondary-container) / <alpha-value>)",
+              outline: "rgb(var(--outline) / <alpha-value>)",
+              "on-tertiary-container":
+                "rgb(var(--on-tertiary-container) / <alpha-value>)",
+              "surface-bright": "rgb(var(--surface-bright) / <alpha-value>)",
+              "inverse-on-surface":
+                "rgb(var(--inverse-on-surface) / <alpha-value>)",
+              "on-error": "rgb(var(--on-error) / <alpha-value>)",
+              "surface-container-lowest":
+                "rgb(var(--surface-container-lowest) / <alpha-value>)",
+              "on-tertiary-fixed":
+                "rgb(var(--on-tertiary-fixed) / <alpha-value>)",
+            },
+            fontFamily: {
+              headline: ["Space Grotesk"],
+              body: ["Manrope"],
+              label: ["Space Grotesk"],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Light theme surfaces tuned to logo 1.png background (#F2F1EE) */
+      :root {
+        --on-primary-fixed-variant: 105 0 5;
+        --error: 186 26 26;
+        --error-container: 255 218 214;
+        --tertiary-fixed-dim: 111 105 104;
+        --surface: 242 241 238;
+        --secondary-container: 220 220 220;
+        --on-surface-variant: 83 67 65;
+        --primary-container: 227 34 34;
+        --outline-variant: 200 196 194;
+        --primary-fixed: 255 218 213;
+        --surface-container-highest: 220 218 215;
+        --tertiary-fixed: 229 226 225;
+        --on-secondary-fixed-variant: 69 71 71;
+        --secondary: 99 100 100;
+        --on-surface: 28 27 27;
+        --surface-container-high: 228 226 223;
+        --inverse-primary: 255 180 171;
+        --secondary-fixed-dim: 198 198 199;
+        --on-primary: 255 255 255;
+        --on-tertiary: 48 48 48;
+        --surface-variant: 218 216 213;
+        --inverse-surface: 28 27 27;
+        --background: 242 241 238;
+        --on-secondary-fixed: 26 28 28;
+        --on-primary-fixed: 65 0 2;
+        --on-primary-container: 255 255 255;
+        --primary-fixed-dim: 180 68 56;
+        --surface-container-low: 238 237 234;
+        --secondary-fixed: 226 226 226;
+        --on-error-container: 65 0 1;
+        --on-secondary: 255 255 255;
+        --on-tertiary-fixed-variant: 71 71 70;
+        --surface-tint: 255 180 171;
+        --surface-dim: 232 230 227;
+        --tertiary-container: 117 116 116;
+        --tertiary: 111 105 104;
+        --on-background: 28 27 27;
+        --primary: 156 42 38;
+        --surface-container: 234 232 229;
+        --on-secondary-container: 45 48 48;
+        --outline: 121 97 93;
+        --on-tertiary-container: 255 251 251;
+        --surface-bright: 246 245 242;
+        --inverse-on-surface: 242 242 242;
+        --on-error: 255 255 255;
+        --surface-container-lowest: 250 249 246;
+        --on-tertiary-fixed: 27 28 28;
+      }
+      /* Dark theme surfaces tuned to logo 2.png background (#202020) */
+      html.dark {
+        --on-primary-fixed-variant: 147 0 9;
+        --error: 255 180 171;
+        --error-container: 147 0 10;
+        --tertiary-fixed-dim: 200 198 197;
+        --surface: 32 32 32;
+        --secondary-container: 69 71 71;
+        --on-surface-variant: 231 189 183;
+        --primary-container: 227 34 34;
+        --outline-variant: 93 63 60;
+        --primary-fixed: 255 218 213;
+        --surface-container-highest: 52 52 52;
+        --tertiary-fixed: 229 226 225;
+        --on-secondary-fixed-variant: 69 71 71;
+        --secondary: 198 198 199;
+        --on-surface: 229 226 225;
+        --surface-container-high: 44 44 44;
+        --inverse-primary: 192 0 16;
+        --secondary-fixed-dim: 198 198 199;
+        --on-primary: 105 0 4;
+        --on-tertiary: 48 48 48;
+        --surface-variant: 48 48 48;
+        --inverse-surface: 229 226 225;
+        --background: 32 32 32;
+        --on-secondary-fixed: 26 28 28;
+        --on-primary-fixed: 65 0 2;
+        --on-primary-container: 255 251 255;
+        --primary-fixed-dim: 255 180 171;
+        --surface-container-low: 36 36 36;
+        --secondary-fixed: 226 226 226;
+        --on-error-container: 255 218 214;
+        --on-secondary: 47 49 49;
+        --on-tertiary-fixed-variant: 71 71 70;
+        --surface-tint: 255 180 171;
+        --surface-dim: 28 28 28;
+        --tertiary-container: 117 116 116;
+        --tertiary: 200 198 197;
+        --on-background: 229 226 225;
+        --primary: 255 180 171;
+        --surface-container: 40 40 40;
+        --on-secondary-container: 180 181 181;
+        --outline: 173 136 131;
+        --on-tertiary-container: 255 251 251;
+        --surface-bright: 56 56 56;
+        --inverse-on-surface: 49 48 48;
+        --on-error: 105 0 5;
+        --surface-container-lowest: 24 24 24;
+        --on-tertiary-fixed: 27 28 28;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+        transition:
+          background-color 0.25s ease,
+          color 0.25s ease;
+      }
+      body {
+        background-color: rgb(var(--background));
+        color: rgb(var(--on-surface));
+        font-family: "Manrope", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Space Grotesk", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant/10"
+    >
+      <div
+        class="flex justify-between items-center gap-4 px-6 sm:px-8 py-1.5 sm:py-2 max-w-full mx-auto"
+      >
+        <a
+          href="#home"
+          class="block shrink-0 min-w-0 leading-none"
+          aria-label="KS Digital — home"
+        >
+          <img
+            src="1.png"
+            alt=""
+            width="2000"
+            height="2000"
+            class="h-20 w-auto sm:h-24 md:h-28 lg:h-32 max-h-[min(36vh,13rem)] max-w-[min(480px,92vw)] dark:hidden object-contain object-left"
+            decoding="async"
+          />
+          <img
+            src="2.png"
+            alt=""
+            width="2000"
+            height="2000"
+            class="h-20 w-auto sm:h-24 md:h-28 lg:h-32 max-h-[min(36vh,13rem)] max-w-[min(480px,92vw)] hidden dark:block object-contain object-left"
+            decoding="async"
+          />
+        </a>
+        <div class="hidden md:flex gap-10 items-center">
+          <a
+            class="text-on-surface hover:text-primary-container transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+            href="#home"
+            >About</a
+          >
+          <a
+            class="text-on-surface hover:text-primary-container transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+            href="#why-us"
+            >Why Us</a
+          >
+          <a
+            class="text-on-surface hover:text-primary-container transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+            href="#work"
+            >Work</a
+          >
+          <a
+            class="text-on-surface hover:text-primary-container transition-colors font-['Space_Grotesk'] font-bold tracking-tight"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <button
+            type="button"
+            id="theme-toggle"
+            class="flex items-center justify-center size-9 rounded-full border border-outline-variant/30 text-on-surface hover:bg-surface-container hover:border-primary-container transition-colors"
+            aria-label="Toggle light or dark theme"
+          >
+            <span class="material-symbols-outlined text-xl hidden dark:inline"
+              >light_mode</span
+            >
+            <span class="material-symbols-outlined text-xl dark:hidden"
+              >dark_mode</span
+            >
+          </button>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center bg-primary-container text-white px-6 py-3 font-bold uppercase tracking-widest text-xs active:scale-95 duration-100 transition-all border border-transparent hover:bg-on-primary-fixed-variant hover:text-white hover:border-transparent"
+            >Get a Free Quote</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- HERO SECTION -->
+      <section
+        id="home"
+        class="relative min-h-screen flex items-center pt-32 md:pt-40 px-8 md:px-20 overflow-hidden bg-surface scroll-mt-24"
+      >
+        <div
+          class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+        >
+          <div class="lg:col-span-8 z-10">
+            <div
+              class="inline-block bg-primary-container text-white px-4 py-1 mb-6 font-label font-bold text-sm tracking-widest"
+              style=""
+            >
+              EST. 2026
+            </div>
+            <h1
+              class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-8 uppercase italic"
+              style=""
+            >
+              Professional
+              <span class="text-primary-container" style="">Websites</span> for
+              Local Businesses
+            </h1>
+            <p
+              class="text-xl md:text-2xl font-body text-on-surface-variant max-w-2xl mb-10 leading-relaxed"
+              style=""
+            >
+              Fast · Affordable · No jargon. Get more customers online — without
+              the agency price.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center bg-primary-container hover:bg-on-primary-fixed-variant text-white px-10 py-5 text-lg font-black uppercase tracking-tighter transition-all translate-y-0 hover:-translate-y-1 shadow-2xl"
+              >
+                Get a Free Quote
+              </a>
+              <a
+                href="#work"
+                class="inline-flex items-center justify-center border border-outline-variant hover:border-primary text-on-surface px-10 py-5 text-lg font-black uppercase tracking-tighter transition-all"
+              >
+                View Our Work
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-4 relative hidden lg:block">
+            <div
+              class="aspect-[3/4] bg-surface-container-low border-l-4 border-primary-container p-8 flex flex-col justify-end relative overflow-hidden group"
+            >
+              <div
+                class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-700"
+                aria-hidden="true"
+              >
+                <span
+                  class="text-on-surface-variant/50 text-xs font-bold uppercase tracking-widest"
+                  >Image placeholder</span
+                >
+              </div>
+              <div class="relative z-10">
+                <span
+                  class="text-5xl font-black text-primary-container block mb-2"
+                  style=""
+                  >100%</span
+                >
+                <span
+                  class="text-lg font-bold uppercase tracking-widest leading-none"
+                  style=""
+                  >Built for Local UK Businesses</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Background Decoration -->
+        <div
+          class="absolute top-0 right-0 w-1/2 h-full bg-surface-container-lowest -z-10 skew-x-12 translate-x-1/4"
+        ></div>
+      </section>
+      <!-- WHY US SECTION -->
+      <section
+        id="why-us"
+        class="py-24 px-8 md:px-20 bg-surface-container-low scroll-mt-24"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+          >
+            <div class="max-w-2xl">
+              <h2
+                class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4"
+                style=""
+              >
+                Why partner <br />with KS Digital?
+              </h2>
+              <div class="h-2 w-24 bg-primary-container"></div>
+            </div>
+            <p
+              class="text-on-surface-variant max-w-sm font-body text-lg italic"
+              style=""
+            >
+              We skip the agency fluff and focus on what matters: getting you
+              more customers.
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 border border-outline-variant/20"
+          >
+            <!-- Feature 1 -->
+            <div
+              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group"
+            >
+              <div
+                class="w-12 h-12 bg-surface flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-primary-container group-hover:text-white"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >bolt</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold uppercase mb-4 tracking-tight"
+                style=""
+              >
+                Fast turnaround
+              </h3>
+              <p
+                class="text-on-surface-variant font-body leading-relaxed"
+                style=""
+              >
+                Your business doesn't wait. We deliver professional sites in as
+                little as 7 days.
+              </p>
+            </div>
+            <!-- Feature 2 -->
+            <div
+              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group"
+            >
+              <div
+                class="w-12 h-12 bg-surface flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-primary-container group-hover:text-white"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >smartphone</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold uppercase mb-4 tracking-tight"
+                style=""
+              >
+                Mobile friendly
+              </h3>
+              <p
+                class="text-on-surface-variant font-body leading-relaxed"
+                style=""
+              >
+                Perfectly optimized for customers searching for your services on
+                the go.
+              </p>
+            </div>
+            <!-- Feature 3 -->
+            <div
+              class="p-10 border-r border-b border-outline-variant/20 hover:bg-surface-container transition-colors group"
+            >
+              <div
+                class="w-12 h-12 bg-surface flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-primary-container group-hover:text-white"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >payments</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold uppercase mb-4 tracking-tight"
+                style=""
+              >
+                Affordable
+              </h3>
+              <p
+                class="text-on-surface-variant font-body leading-relaxed"
+                style=""
+              >
+                Transparent pricing with no hidden fees or complex long-term
+                contracts.
+              </p>
+            </div>
+            <!-- Feature 4 -->
+            <div
+              class="p-10 border-b border-outline-variant/20 hover:bg-surface-container transition-colors group"
+            >
+              <div
+                class="w-12 h-12 bg-surface flex items-center justify-center mb-8 group-hover:bg-primary-container transition-colors"
+              >
+                <span
+                  class="material-symbols-outlined text-primary-container group-hover:text-white"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >location_on</span
+                >
+              </div>
+              <h3
+                class="text-xl font-bold uppercase mb-4 tracking-tight"
+                style=""
+              >
+                Local
+              </h3>
+              <p
+                class="text-on-surface-variant font-body leading-relaxed"
+                style=""
+              >
+                UK based and locally focused. We speak your language, not
+                tech-speak.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- EXAMPLE WORK SECTION (Bento Grid Style) -->
+      <section id="work" class="py-24 px-8 md:px-20 bg-surface scroll-mt-24">
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-16">
+            <h2
+              class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4"
+              style=""
+            >
+              Selected Projects
+            </h2>
+            <p class="text-on-surface-variant max-w-xl font-body" style="">
+              Proven results for local trades and services across the country.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Project 1: Plasterer -->
+            <div
+              class="md:col-span-7 group relative bg-surface-container-high overflow-hidden min-h-[450px] flex flex-col justify-end p-8 border-l-8 border-primary-container"
+            >
+              <div
+                class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-500"
+                aria-hidden="true"
+              >
+                <span
+                  class="text-on-surface-variant/50 text-xs font-bold uppercase tracking-widest"
+                  >Image placeholder</span
+                >
+              </div>
+              <div class="relative z-10">
+                <span
+                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4 inline-block"
+                  style=""
+                  >CONSTRUCTION</span
+                >
+                <h3 class="text-3xl font-black uppercase mb-6" style="">
+                  Elite Plastering UK
+                </h3>
+                <button
+                  class="flex items-center gap-2 font-bold uppercase tracking-tighter text-sm group-hover:gap-4 transition-all"
+                  style=""
+                >
+                  View Site
+                  <span class="material-symbols-outlined" style=""
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Project 2: Dog Groomer -->
+            <div
+              class="md:col-span-5 group relative bg-surface-container-high overflow-hidden min-h-[450px] flex flex-col justify-end p-8"
+            >
+              <div
+                class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-500"
+                aria-hidden="true"
+              >
+                <span
+                  class="text-on-surface-variant/50 text-xs font-bold uppercase tracking-widest"
+                  >Image placeholder</span
+                >
+              </div>
+              <div class="relative z-10">
+                <span
+                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4 inline-block"
+                  style=""
+                  >PET SERVICES</span
+                >
+                <h3 class="text-3xl font-black uppercase mb-6" style="">
+                  Paws &amp; Polish
+                </h3>
+                <button
+                  class="flex items-center gap-2 font-bold uppercase tracking-tighter text-sm group-hover:gap-4 transition-all"
+                  style=""
+                >
+                  View Site
+                  <span class="material-symbols-outlined" style=""
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- Project 3: Mobile Mechanic -->
+            <div
+              class="md:col-span-12 group relative bg-surface-container-high overflow-hidden min-h-[350px] flex flex-col md:flex-row items-center p-8 gap-8"
+            >
+              <div class="md:w-1/2 relative h-full min-h-[250px] w-full">
+                <div
+                  class="absolute inset-0 bg-surface-container border border-dashed border-outline-variant/50 flex items-center justify-center opacity-90 group-hover:scale-105 transition-transform duration-500"
+                  aria-hidden="true"
+                >
+                  <span
+                    class="text-on-surface-variant/50 text-xs font-bold uppercase tracking-widest"
+                    >Image placeholder</span
+                  >
+                </div>
+              </div>
+              <div class="md:w-1/2 flex flex-col justify-center">
+                <span
+                  class="bg-primary-container text-white px-3 py-1 text-xs font-bold uppercase tracking-widest mb-4 inline-block w-fit"
+                  style=""
+                  >AUTOMOTIVE</span
+                >
+                <h3 class="text-4xl font-black uppercase mb-4" style="">
+                  The Mobile Spanner
+                </h3>
+                <p class="text-on-surface-variant mb-8 max-w-md" style="">
+                  Full booking system and service directory built for a local
+                  independent mechanic.
+                </p>
+                <button
+                  class="bg-on-surface text-surface w-fit px-8 py-4 font-black uppercase tracking-tighter hover:bg-primary-container hover:text-white transition-all"
+                  style=""
+                >
+                  View Site
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CONTACT SECTION -->
+      <section
+        id="contact"
+        class="py-24 px-8 md:px-20 bg-primary-container text-white relative overflow-hidden scroll-mt-24"
+      >
+        <div
+          class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 gap-12"
+        >
+          <div class="max-w-2xl">
+            <h2
+              class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-6 leading-none"
+              style=""
+            >
+              Ready to <br />get online?
+            </h2>
+            <p
+              class="text-xl md:text-2xl font-body opacity-90 max-w-lg mb-8 italic"
+              style=""
+            >
+              No high-pressure sales. Just a honest conversation about how we
+              can help your business grow.
+            </p>
+            <div class="space-y-4">
+              <div
+                class="flex items-center gap-4 text-2xl font-bold tracking-tight"
+                style=""
+              >
+                <span class="material-symbols-outlined" style="">mail</span>
+                ksdigitaluk@gmail.com
+              </div>
+              <div
+                class="flex items-center gap-4 text-2xl font-bold tracking-tight"
+                style=""
+              ></div>
+            </div>
+          </div>
+          <div class="w-full lg:w-auto">
+            <div
+              class="bg-surface p-10 md:p-12 border-t-8 border-surface-container-high shadow-2xl min-w-full md:min-w-[450px]"
+            >
+              <h3
+                class="text-on-surface text-3xl font-black uppercase mb-8 tracking-tighter"
+              >
+                Send a Message
+              </h3>
+              <form class="space-y-6">
+                <div>
+                  <label
+                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                    for="contact-name"
+                    >Your Name</label
+                  >
+                  <input
+                    id="contact-name"
+                    name="name"
+                    autocomplete="name"
+                    class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-container text-on-surface px-3 sm:px-4 py-3 outline-none transition-all placeholder:text-outline-variant"
+                    placeholder="Your Name"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                    for="contact-email"
+                    >Your Email</label
+                  >
+                  <input
+                    id="contact-email"
+                    name="email"
+                    autocomplete="email"
+                    class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-container text-on-surface px-3 sm:px-4 py-3 outline-none transition-all placeholder:text-outline-variant"
+                    placeholder="Your Email"
+                    type="email"
+                    inputmode="email"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                    for="contact-enquiry"
+                    >Enquiry</label
+                  >
+                  <textarea
+                    id="contact-enquiry"
+                    name="enquiry"
+                    rows="5"
+                    class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-container text-on-surface px-3 sm:px-4 py-3 outline-none transition-all placeholder:text-outline-variant resize-y min-h-[7rem] block"
+                    placeholder="Your enquiry"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-primary-container text-white py-5 font-black uppercase tracking-widest hover:bg-white hover:text-primary-container transition-all"
+                >
+                  Send Enquiry
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!-- Decorative Large Text -->
+        <div
+          class="absolute -bottom-10 -left-10 text-[20rem] font-black text-white/5 pointer-events-none select-none uppercase tracking-tighter leading-none"
+          style=""
+        >
+          KS
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface w-full border-t-0">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center px-8 py-12 w-full border-t border-outline-variant/20"
+      >
+        <div class="mb-8 md:mb-0">
+          <a href="#home" class="inline-block mb-2" aria-label="KS Digital — home">
+            <img
+              src="1.png"
+              alt=""
+              width="2000"
+              height="2000"
+              class="h-16 w-auto sm:h-20 md:h-24 max-w-[min(400px,92vw)] dark:hidden object-contain object-left"
+              decoding="async"
+            />
+            <img
+              src="2.png"
+              alt=""
+              width="2000"
+              height="2000"
+              class="h-16 w-auto sm:h-20 md:h-24 max-w-[min(400px,92vw)] hidden dark:block object-contain object-left"
+              decoding="async"
+            />
+          </a>
+          <p
+            class="text-on-surface-variant/60 text-xs tracking-widest uppercase"
+          >
+            <br />
+          </p>
+        </div>
+        <div
+          class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0 font-['Manrope'] text-sm tracking-wide"
+        >
+          <a
+            class="text-on-surface-variant hover:text-primary-container transition-colors opacity-80 hover:opacity-100"
+            href="#contact"
+            >Contact Us</a
+          >
+        </div>
+        <div
+          class="text-on-surface-variant opacity-60 text-sm font-['Manrope']"
+        >
+          © 2026 KS Digital. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var btn = document.getElementById("theme-toggle");
+        if (!btn) return;
+        btn.addEventListener("click", function () {
+          var root = document.documentElement;
+          root.classList.toggle("dark");
+          try {
+            localStorage.setItem(
+              "ks-theme",
+              root.classList.contains("dark") ? "dark" : "light",
+            );
+          } catch (e) {}
+        });
+      })();
+    </script>
+  </body>
+</html>

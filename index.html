@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <link id="ks-favicon" rel="icon" type="image/png" href="1.png" sizes="any" />
+    <link
+      id="ks-favicon"
+      rel="icon"
+      type="image/png"
+      href="1.png"
+      sizes="any"
+    />
     <link rel="apple-touch-icon" href="1.png" />
     <title>KS Digital | Professional Websites for Local Businesses</title>
     <script>
@@ -298,6 +304,40 @@
           transition-delay: 0s;
         }
       }
+      .how-it-works-section {
+        background-color: #f5f2ee;
+      }
+      html.dark .how-it-works-section {
+        background-color: rgb(var(--surface-container-low));
+      }
+      .how-card-core {
+        background-color: #ffffff;
+        border: 0.5px solid rgba(17, 17, 17, 0.1);
+        padding: 1.5rem 1.25rem;
+      }
+      @media (min-width: 768px) {
+        .how-card-core {
+          padding: 1.75rem 1.5rem;
+        }
+      }
+      html.dark .how-card-core {
+        background-color: rgb(var(--surface-container-highest));
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+      .how-card-optional {
+        background-color: #f9f9f9;
+        border: 1px dashed rgba(17, 17, 17, 0.14);
+        padding: 1.5rem 1.25rem;
+      }
+      @media (min-width: 768px) {
+        .how-card-optional {
+          padding: 1.75rem 1.5rem;
+        }
+      }
+      html.dark .how-card-optional {
+        background-color: rgb(var(--surface-container));
+        border-color: rgba(255, 255, 255, 0.12);
+      }
     </style>
   </head>
   <body
@@ -342,6 +382,11 @@
             class="nav-section-link border-b-2 border-transparent pb-1 font-['Space_Grotesk'] font-bold tracking-tight text-on-surface hover:text-primary-container transition-colors"
             href="#why-us"
             >Why Us</a
+          >
+          <a
+            class="nav-section-link border-b-2 border-transparent pb-1 font-['Space_Grotesk'] font-bold tracking-tight text-on-surface hover:text-primary-container transition-colors"
+            href="#how-it-works"
+            >How It Works</a
           >
           <a
             class="nav-section-link border-b-2 border-transparent pb-1 font-['Space_Grotesk'] font-bold tracking-tight text-on-surface hover:text-primary-container transition-colors"
@@ -563,8 +608,7 @@
                 class="text-on-surface-variant font-body leading-relaxed"
                 style=""
               >
-                Transparent pricing with no hidden fees or complex long-term
-                contracts.
+                No surprise invoices or long-term contracts.
               </p>
             </div>
             <!-- Feature 4 -->
@@ -594,6 +638,187 @@
                 tech-speak.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+      <!-- HOW IT WORKS -->
+      <section
+        id="how-it-works"
+        class="how-it-works-section py-24 px-4 sm:px-8 md:px-20 scroll-mt-24"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div class="mb-14 md:mb-16 reveal">
+            <h2
+              class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4 text-[#111111] dark:text-white"
+            >
+              How it works
+            </h2>
+            <p
+              class="max-w-2xl font-body text-lg text-[#5c534f] dark:text-on-surface-variant"
+            >
+              From first contact to fully live — we keep it simple.
+            </p>
+          </div>
+          <!-- Row 1: core steps (equal height on md+) -->
+          <div
+            class="grid grid-cols-1 gap-6 md:grid-cols-[minmax(0,1fr)_2.75rem_minmax(0,1fr)_2.75rem_minmax(0,1fr)] md:items-stretch md:gap-x-0 md:gap-y-0 lg:gap-x-1"
+          >
+            <article
+              class="how-card-core flex min-h-0 flex-col text-left reveal"
+            >
+              <div
+                class="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#E32222] font-headline text-xl font-black text-white"
+              >
+                1
+              </div>
+              <h3
+                class="mb-3 font-headline text-base font-black uppercase tracking-tight text-[#111111] dark:text-white md:text-lg"
+              >
+                Free consultation
+              </h3>
+              <p
+                class="flex-1 font-body text-sm leading-relaxed text-[#5c534f] dark:text-on-surface-variant md:text-[0.9375rem]"
+              >
+                We start with a quick chat to understand your business, what you
+                need, and what you want to achieve. No pressure, no commitment.
+              </p>
+            </article>
+            <div
+              class="flex h-10 shrink-0 items-center justify-center text-[#E32222] md:h-14 md:self-start"
+              aria-hidden="true"
+            >
+              <span
+                class="material-symbols-outlined rotate-90 text-3xl md:rotate-0"
+                >arrow_forward</span
+              >
+            </div>
+            <article
+              class="how-card-core flex min-h-0 flex-col text-left reveal reveal-delay-1"
+            >
+              <div
+                class="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#E32222] font-headline text-xl font-black text-white"
+              >
+                2
+              </div>
+              <h3
+                class="mb-3 font-headline text-base font-black uppercase tracking-tight text-[#111111] dark:text-white md:text-lg"
+              >
+                Design &amp; build
+              </h3>
+              <p
+                class="flex-1 font-body text-sm leading-relaxed text-[#5c534f] dark:text-on-surface-variant md:text-[0.9375rem]"
+              >
+                We design and build your website using modern tools. You’ll get
+                a preview link to review before anything goes live. Fully mobile
+                friendly as standard.
+              </p>
+            </article>
+            <div
+              class="flex h-10 shrink-0 items-center justify-center text-[#E32222] md:h-14 md:self-start"
+              aria-hidden="true"
+            >
+              <span
+                class="material-symbols-outlined rotate-90 text-3xl md:rotate-0"
+                >arrow_forward</span
+              >
+            </div>
+            <article
+              class="how-card-core flex min-h-0 flex-col text-left reveal reveal-delay-2"
+            >
+              <div
+                class="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#E32222] font-headline text-xl font-black text-white"
+              >
+                3
+              </div>
+              <h3
+                class="mb-3 font-headline text-base font-black uppercase tracking-tight text-[#111111] dark:text-white md:text-lg"
+              >
+                Go live or hand over
+              </h3>
+              <p
+                class="flex-1 font-body text-sm leading-relaxed text-[#5c534f] dark:text-on-surface-variant md:text-[0.9375rem]"
+              >
+                Once you’re happy with the design you have two options — we can
+                get it live with a domain and hosting sorted for you, or we hand
+                over the files so you can host it yourself. Completely your
+                choice, no pressure either way.
+              </p>
+            </article>
+          </div>
+          <!-- Divider + optional row label -->
+          <div
+            class="my-12 flex w-full items-center gap-3 sm:gap-4 md:my-14 reveal reveal-delay-2"
+            role="separator"
+          >
+            <div
+              class="h-0 min-w-0 flex-1 border-t border-dashed border-black/15 dark:border-white/12"
+            ></div>
+            <span
+              class="shrink-0 font-headline text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[#6b6560] dark:text-on-surface-variant uppercase"
+              >Optional add-ons</span
+            >
+            <div
+              class="h-0 min-w-0 flex-1 border-t border-dashed border-black/15 dark:border-white/12"
+            ></div>
+          </div>
+          <!-- Row 2: optional steps (narrower, centered) -->
+          <div
+            class="mx-auto grid w-full max-w-3xl grid-cols-1 gap-6 md:grid-cols-[minmax(0,1fr)_2.75rem_minmax(0,1fr)] md:items-stretch md:gap-x-0 md:gap-y-0 lg:max-w-4xl"
+          >
+            <article
+              class="how-card-optional flex min-h-0 flex-col text-left reveal reveal-delay-3"
+            >
+              <div class="mb-4">
+                <span
+                  class="inline-block bg-[#E32222] px-2.5 py-1 font-headline text-[0.65rem] font-bold uppercase tracking-widest text-white"
+                  >Optional</span
+                >
+              </div>
+              <h3
+                class="mb-3 font-headline text-base font-black uppercase tracking-tight text-[#111111] dark:text-white md:text-lg"
+              >
+                Hosting &amp; maintenance
+              </h3>
+              <p
+                class="flex-1 font-body text-sm leading-relaxed text-[#5c534f] dark:text-on-surface-variant md:text-[0.9375rem]"
+              >
+                If you want us to handle everything — hosting, domain, security
+                updates and content changes — we’ve got you covered. First 2
+                months completely free, then a small monthly fee. Cancel
+                anytime, no contracts.
+              </p>
+            </article>
+            <div
+              class="flex h-10 shrink-0 items-center justify-center text-[#E32222] md:h-auto md:items-start md:justify-center md:self-start md:pt-1"
+              aria-hidden="true"
+            >
+              <span
+                class="material-symbols-outlined rotate-90 text-3xl md:rotate-0"
+                >arrow_forward</span
+              >
+            </div>
+            <article
+              class="how-card-optional flex min-h-0 flex-col text-left reveal reveal-delay-4"
+            >
+              <div class="mb-4">
+                <span
+                  class="inline-block bg-[#E32222] px-2.5 py-1 font-headline text-[0.65rem] font-bold uppercase tracking-widest text-white"
+                  >Optional</span
+                >
+              </div>
+              <h3
+                class="mb-3 font-headline text-base font-black uppercase tracking-tight text-[#111111] dark:text-white md:text-lg"
+              >
+                Grow your presence
+              </h3>
+              <p
+                class="flex-1 font-body text-sm leading-relaxed text-[#5c534f] dark:text-on-surface-variant md:text-[0.9375rem]"
+              >
+                Want more customers finding you on Google? We offer SEO setup,
+                Google Business listing, and social media profile setup to help
+                you get found locally.
+              </p>
+            </article>
           </div>
         </div>
       </section>
@@ -627,9 +852,7 @@
               >
             </p>
           </div>
-          <div
-            class="grid grid-cols-1 md:grid-cols-12 md:items-stretch gap-8"
-          >
+          <div class="grid grid-cols-1 md:grid-cols-12 md:items-stretch gap-8">
             <!-- Project 1: Plasterer — full screenshot + caption below -->
             <div
               class="md:col-span-7 group flex h-full min-h-0 flex-col bg-surface-container-high overflow-hidden border-l-8 border-primary-container reveal"
@@ -770,8 +993,8 @@
             >
               The previews above are just a taste—we can build whatever suits
               you. Tell us what you need, your style, and your goals; we’ll
-              shape a site around that. No rigid templates or hard limits—just
-              a straightforward process and a result you’re happy with.
+              shape a site around that. No rigid templates or hard limits—just a
+              straightforward process and a result you’re happy with.
             </p>
           </div>
         </div>
@@ -795,7 +1018,7 @@
               class="text-xl md:text-2xl font-body opacity-90 max-w-lg mb-8 italic"
               style=""
             >
-              No high-pressure sales. Just a honest conversation about how we
+              No high-pressure sales. Just an honest conversation about how we
               can help your business grow.
             </p>
             <div class="space-y-4">
@@ -823,61 +1046,61 @@
                   Send a Message
                 </h3>
                 <form id="contact-form" class="space-y-6">
-                <div>
-                  <label
-                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
-                    for="contact-name"
-                    >Your Name</label
+                  <div>
+                    <label
+                      class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
+                      for="contact-name"
+                      >Your Name</label
+                    >
+                    <input
+                      id="contact-name"
+                      name="name"
+                      autocomplete="name"
+                      required
+                      class="w-full rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20"
+                      placeholder="Your Name"
+                      type="text"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
+                      for="contact-email"
+                      >Your Email</label
+                    >
+                    <input
+                      id="contact-email"
+                      name="email"
+                      autocomplete="email"
+                      required
+                      class="w-full rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20"
+                      placeholder="Your Email"
+                      type="email"
+                      inputmode="email"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
+                      for="contact-enquiry"
+                      >Enquiry</label
+                    >
+                    <textarea
+                      id="contact-enquiry"
+                      name="enquiry"
+                      rows="5"
+                      required
+                      class="w-full min-h-[7rem] resize-y rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20 block"
+                      placeholder="Your enquiry"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-primary-container text-white py-5 font-black uppercase tracking-widest hover:bg-white hover:text-primary-container transition-all"
                   >
-                  <input
-                    id="contact-name"
-                    name="name"
-                    autocomplete="name"
-                    required
-                    class="w-full rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20"
-                    placeholder="Your Name"
-                    type="text"
-                  />
-                </div>
-                <div>
-                  <label
-                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
-                    for="contact-email"
-                    >Your Email</label
-                  >
-                  <input
-                    id="contact-email"
-                    name="email"
-                    autocomplete="email"
-                    required
-                    class="w-full rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20"
-                    placeholder="Your Email"
-                    type="email"
-                    inputmode="email"
-                  />
-                </div>
-                <div>
-                  <label
-                    class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant dark:text-white mb-2"
-                    for="contact-enquiry"
-                    >Enquiry</label
-                  >
-                  <textarea
-                    id="contact-enquiry"
-                    name="enquiry"
-                    rows="5"
-                    required
-                    class="w-full min-h-[7rem] resize-y rounded-none border border-outline-variant/55 bg-transparent px-4 py-3.5 text-on-surface outline-none transition-[border-color,box-shadow] duration-200 placeholder:text-outline-variant focus:border-primary-container focus:ring-1 focus:ring-primary-container/35 focus:ring-offset-0 dark:border-white/20 dark:bg-white/[0.04] dark:text-white dark:placeholder:text-white/70 dark:caret-white dark:focus:border-white/85 dark:focus:ring-white/20 block"
-                    placeholder="Your enquiry"
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  class="w-full bg-primary-container text-white py-5 font-black uppercase tracking-widest hover:bg-white hover:text-primary-container transition-all"
-                >
-                  Send Enquiry
-                </button>
-              </form>
+                    Send Enquiry
+                  </button>
+                </form>
               </div>
               <div
                 id="contact-success-panel"
@@ -901,7 +1124,11 @@
                   >
                     <span
                       class="material-symbols-outlined text-[2.75rem] leading-none"
-                      style="font-variation-settings: 'FILL' 1, 'wght' 600"
+                      style="
+                        font-variation-settings:
+                          &quot;FILL&quot; 1,
+                          &quot;wght&quot; 600;
+                      "
                       aria-hidden="true"
                       >check</span
                     >
@@ -982,7 +1209,9 @@
         data-lightbox-close
         aria-label="Close"
       >
-        <span class="material-symbols-outlined text-2xl leading-none">close</span>
+        <span class="material-symbols-outlined text-2xl leading-none"
+          >close</span
+        >
       </button>
     </div>
     <!-- Footer -->
@@ -1087,7 +1316,7 @@
         });
       })();
       (function () {
-        var ids = ["home", "why-us", "work", "contact"];
+        var ids = ["home", "why-us", "how-it-works", "work", "contact"];
         var links = document.querySelectorAll("a.nav-section-link");
         if (!links.length) return;
         function sectionTop(el) {
@@ -1271,15 +1500,17 @@
           document.addEventListener("keydown", onKeydown);
           if (closeBtn) closeBtn.focus();
         }
-        document.querySelectorAll(".work-fullscreen-btn").forEach(function (btn) {
-          btn.addEventListener("click", function (e) {
-            e.stopPropagation();
-            openLightbox(
-              btn.getAttribute("data-full-src"),
-              btn.getAttribute("data-full-alt"),
-            );
+        document
+          .querySelectorAll(".work-fullscreen-btn")
+          .forEach(function (btn) {
+            btn.addEventListener("click", function (e) {
+              e.stopPropagation();
+              openLightbox(
+                btn.getAttribute("data-full-src"),
+                btn.getAttribute("data-full-alt"),
+              );
+            });
           });
-        });
         if (backdrop)
           backdrop.addEventListener("click", function () {
             closeLightbox();
